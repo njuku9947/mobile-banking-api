@@ -35,7 +35,7 @@ jobs:
       - name: Run Unit Tests
         run: pytest
 
-      -name: Show Repository Contents
+      - name: Show Repository Contents
        run: |
          pwd
          echo "===== Repository Files ====="
@@ -51,7 +51,7 @@ jobs:
 
       - name: Build Docker Image
         run: |
-          docker build -t mobile-banking-api ..
+          docker build -t mobile-banking-api .
 
       - name: Scan Docker Image
         uses: aquasecurity/trivy-action@master
