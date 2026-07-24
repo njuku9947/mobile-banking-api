@@ -50,8 +50,7 @@ jobs:
           cat Dockerfile
 
       - name: Build Docker Image
-        run: |
-          docker build -t mobile-banking-api .
+        run: docker build -t mobile-banking-api .
 
       - name: Scan Docker Image
         uses: aquasecurity/trivy-action@master
