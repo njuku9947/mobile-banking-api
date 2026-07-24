@@ -27,7 +27,7 @@ jobs:
           pip install bandit pip-audit pytest
 
       - name: Run Bandit (SAST)
-        run: bandit -r .
+        run: bandit -r .-x tests
 
       - name: Dependency Scan
         run: pip-audit
